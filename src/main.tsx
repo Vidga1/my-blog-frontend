@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { NextUIProvider } from '@nextui-org/react';
 import { store } from './app/store';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
