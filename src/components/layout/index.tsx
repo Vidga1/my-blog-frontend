@@ -1,10 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/no-restricted-imports
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { FC } from 'react';
 import { Container } from '../container';
 import { NavBar } from '../nav-bar';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { Profile } from '../profile';
 import {
   selectUser,
   selectIsAuthenticated,
@@ -32,7 +32,9 @@ export const Layout = () => {
         <div className="flex-1 p-4">
           <Outlet />
         </div>
-        <div className="flex-2 p-4"></div>
+        <div className="flex-2 p-4">
+          <div className="flex-col flex gap-5">{!user && <Profile />}</div>
+        </div>
       </Container>
     </>
   );
