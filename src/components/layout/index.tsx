@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Header } from '../header';
 import { Container } from '../container';
 import { NavBar } from '../nav-bar';
-import { Outlet, useNavigate } from 'react-router-dom';
-import { Header } from '../header';
+import { Outlet } from 'react-router-dom';
 
 export const Layout = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <Header />
@@ -17,7 +15,6 @@ export const Layout = () => {
         <div className="flex-1 p-4">
           <Outlet />
         </div>
-        <div className="flex-2 p-4"></div>
       </Container>
     </>
   );
