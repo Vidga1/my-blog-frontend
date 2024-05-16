@@ -29,7 +29,7 @@ export const Header = () => {
   return (
     <Navbar>
       <NavbarBrand>
-        <p className="font-bold text-inherit">Network Social</p>
+        <p className="font-bold text-xl">Web Blog App</p>
       </NavbarBrand>
 
       <NavbarContent justify="end">
