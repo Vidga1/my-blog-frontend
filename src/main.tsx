@@ -6,6 +6,7 @@ import { store } from './app/store';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import { Auth } from './pages/auth';
+import { AuthGuard } from './features/user/authGuard';
 import { Posts } from './pages/posts';
 import { ThemeProvider } from './components/theme-provider';
 import { Layout } from './components/layout';
@@ -51,7 +52,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider>
-        <RouterProvider router={router} />
+        <AuthGuard>
+          <RouterProvider router={router} />
+        </AuthGuard>
       </ThemeProvider>
     </Provider>
   </React.StrictMode>,
