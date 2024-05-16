@@ -21,13 +21,17 @@
         "paths": [
           {
             "name": "react-redux",
-            "importNames": ["useStore", "useDispatch"],
+            "importNames": ["useStore"],
             "message": "Please use pre-typed versions from `src/app/hooks.ts` instead."
           }
         ],
         "patterns": [
           {
             "group": ["react-redux/es/hooks/useSelector"],
+            "message": null
+          },
+          {
+            "group": ["react-redux/es/hooks/useDispatch"],
             "message": null
           }
         ]
